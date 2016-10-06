@@ -3,10 +3,7 @@
         "target": "es5",
         "sourceMap": true,
         "module": "commonjs",
-        "outDir": "build",
-        "types": [
-            "core-js"
-        ]
+        "outDir": "build"
     },
     "exclude": [
         "node_modules",
