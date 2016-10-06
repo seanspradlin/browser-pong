@@ -9,8 +9,10 @@ var gulp        = require('gulp')
   , minifyCss   = require('gulp-minify-css')
   , tslint      = require('gulp-tslint')
   , ts          = require('gulp-typescript')
+  , typescript  = require('typescript')
   , merge       = require('merge2')
-  , Config      = require('./gulpfile.config');
+  , Config      = require('./gulpfile.config')
+  , tsProject   = ts.createProject('tsconfig.json', { typescript });
 
 // TS Lint
 gulp.task('tslint', function () {
@@ -20,15 +22,12 @@ gulp.task('tslint', function () {
 });
 
 gulp.task('ts-crunch', function() {
-  return gulp.src(Config.source + 'scripts/**/*.ts')
-              .pipe(sourcemaps.init())
-              .pipe(ts({
-                target: 'ES5'
-              }))
-              .pipe(concat('app.min.js'))
-              .pipe(uglify())
-              .pipe(sourcemaps.write())
-              .pipe(gulp.dest(Config.build + 'scripts'));
+  return tsProject
+    .src(Config.source + 'scripts/**/*.ts')
+    .pipe(ts(tsProject))
+    .js
+    .pipe(uglify())
+    .pipe(gulp.dest(Config.build + 'scripts'));
 });
 
 // Minify HTML

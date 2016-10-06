@@ -3,7 +3,7 @@
         "target": "es5",
         "sourceMap": true,
         "module": "commonjs",
-        "outDir": "build"
+        "outFile": "app.min.js"
     },
     "exclude": [
         "node_modules",
