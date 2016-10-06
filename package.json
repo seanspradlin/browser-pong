@@ -1,0 +1,37 @@
+{
+  "name": "browser-pong",
+  "version": "1.0.0",
+  "description": "This is a demo to use websockets for a multiplayer browser game",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "typings": "typings install",
+    "compile": "tsc",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanspradlin/browser-pong.git"
+  },
+  "author": "Sean Spradlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanspradlin/browser-pong/issues"
+  },
+  "homepage": "https://github.com/seanspradlin/browser-pong#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^3.3.0",
+    "gulp-typescript": "^2.9.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-wrap": "^0.11.0",
+    "merge2": "^0.3.6",
+    "phaser": "^2.6.2",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
+  }
+}
