@@ -57,7 +57,7 @@ gulp.task('css-production', function() {
 
 // Migrate phaser files
 gulp.task('phaser', function () {
-  return gulp.src('./node_modules/phaser/dist/phaser.*')
+  return gulp.src('./node_modules/phaser/build/phaser.*')
     .pipe(gulp.dest(Config.build + 'scripts/'));
 });
 
