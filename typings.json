@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
-    "phaser": "github:photonstorm/phaser/typescript/typings.json"
+    "phaser": "github:photonstorm/phaser/typescript/typings.json",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20160317120654"
   }
 }
