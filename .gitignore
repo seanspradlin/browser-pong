@@ -2,3 +2,4 @@ node_modules/
 typings/
 Thumbs.db
 build/
+.vscode/
